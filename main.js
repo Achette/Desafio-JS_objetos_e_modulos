@@ -1,6 +1,6 @@
 import Order from "./js/order.js";
 import ShippingService from "./js/shippingService.js";
-import orderService from "./js/orderService.js";
+import OrderService from "./js/OrderService.js";
 
 const code = document.querySelector("#code");
 const basic = document.querySelector("#basic");
@@ -9,21 +9,20 @@ const button = document.querySelector("#calc");
 const result = document.querySelector("#result");
 
 const sp = new ShippingService();
-const os = new orderService();
+const os = new OrderService();
 
 function purshace(item) {
-  let total 
-  if(item.basic == 0) {
-    return result.innerHTML =  `Empty cart`
+  let total;
+  if (item.basic == 0) {
+    return result.innerHTML = `Empty cart =\\`;
   } else {
-    total = os.total(item) + sp.shipment(item.basic)
-    return result.innerHTML = `Purshace code: ${item.code}
-    Valor total = ${total.toFixed(2)}`
+    total = os.total(item) + sp.shipment(item.basic);
+    return result.innerHTML = `Purshace code: ${item.code} Valor total = ${total.toFixed(2)}`;
   }
 }
 
-button.addEventListener("click", function (e) {
+button.addEventListener("click", function(e) {
   e.preventDefault;
-  const order = new Order(code.value, basic.value, discount.value);  
-  purshace(order)
+  const order = new Order(code.value, basic.value, discount.value);
+  purshace(order);
 });

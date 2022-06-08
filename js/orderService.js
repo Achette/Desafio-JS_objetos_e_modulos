@@ -1,5 +1,3 @@
-import ShippingService from "./shippingService.js";
-
 class OrderService {
   constructor() {}
 
