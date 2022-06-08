@@ -78,11 +78,6 @@ table th {
   font-size: 20px;
 }
 
-.error {
-  color: #780000;
-  font-weight: bold;
-}
-
 @media (max-width: 768px) {
   .inputs {
     height: auto;
