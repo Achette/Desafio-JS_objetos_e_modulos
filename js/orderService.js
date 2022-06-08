@@ -4,9 +4,8 @@ class OrderService {
   total(order) {
     let basicprice = order.basic;
     let discount = order.discount;
-    let total;
 
-    total = basicprice - basicprice * (discount / 100);
+    const total = basicprice - basicprice * (discount / 100);
 
     return total;
   }

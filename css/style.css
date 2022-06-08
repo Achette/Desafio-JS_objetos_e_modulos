@@ -54,12 +54,16 @@ tfoot td, table th {
     width: 100%;
 }
 
+.inputs {
+    margin-bottom: 2rem;
+}
+
 .result {
     width: 90%;
     text-align: center;
-    background-color: #caf0f8;
+    background-color: #accbe1;
     margin-top: 12px;
-    padding: 12px;
+    padding: 1rem;
     border-radius: 4px;
     font-size: 20px;
 }
@@ -69,15 +73,22 @@ tfoot td, table th {
     font-weight: bold;
 }
 
+
 @media(max-width: 768px) {
     .inputs {
         height: auto;
         display: flex;
         flex-direction: column;
+        margin-bottom: 1rem;
         
     }
     .inputs input {
         width: 80vw;
         margin: 5px;
+    }
+
+    .btn {
+        width: 50%;
+        margin: 0 auto;
     }
 }
