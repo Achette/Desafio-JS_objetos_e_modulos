@@ -9,6 +9,12 @@ body {
     margin: 0 auto;
 }
 
+.img-container {
+    max-width: 640px;
+    width: 100%;
+    margin: 1rem auto;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
