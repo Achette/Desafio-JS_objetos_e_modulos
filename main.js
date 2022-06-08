@@ -10,7 +10,6 @@ const result = document.querySelector("#result");
 button.addEventListener("click", function (e) {
   e.preventDefault;
   const order = new Order(code.value, basic.value, discount.value);
-  console.log(order);
   const sale = orderService.total(order);
   result.classList.add("result");
   result.innerHTML = sale;
