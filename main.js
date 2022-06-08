@@ -14,10 +14,14 @@ const os = new OrderService();
 function purshace(item) {
   let total;
   if (item.basic == 0) {
+    result.classList.add("result")
+    result.classList.add("error")
     return result.innerHTML = `Empty cart =\\`;
   } else {
+    result.classList.remove("error")
+    result.classList.add("result")
     total = os.total(item) + sp.shipment(item.basic);
-    return result.innerHTML = `Purshace code: ${item.code} Valor total = ${total.toFixed(2)}`;
+    return result.innerHTML = `Purshace code: ${item.code} <br> <strong>Total price = $${total.toFixed(2)} </strong>`;
   }
 }
 
